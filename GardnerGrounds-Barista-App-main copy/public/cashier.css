@@ -1,0 +1,133 @@
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+  color: black;
+  font-size: 12px;
+  line-height: 1.4;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+.clear {
+ clear: both;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+a{
+  color: #432818;
+  font-size: 25px;
+  border: 1px solid white;
+  background-color: white;
+  /* margin: 0 1% 0 1%; */
+  border-radius: 5px;
+  text-decoration: none;
+  float: right;
+  text-align: center;
+  margin-right: 1%;
+}
+body{
+  margin-top: 40px;
+  word-wrap: break-word;
+  color: white;
+  background-color: #432818;
+}
+h1{
+  font-size: 35px;
+  text-align: center;
+  margin-top: -2%;
+  clear: both;
+}
+img{
+  margin-left: 16%;
+}
+.ggImg{
+  display: flex;
+  justify-content: center;
+}
+label{
+  font-size: 15px;
+}
+.name, .barista{
+  height: 3em;
+  width: 26em;
+  border-color: #432818;
+  box-shadow: 5px 5px 4px black;
+  text-align: center;
+  margin-top: 2em;
+}
+a:hover,.name:hover,.barista:hover,.submitOrder:hover{
+  box-shadow: 0 12px 16px 0 rgba(255,176,201,0.24), 0 17px 50px 0 rgba(255,176,201,0.19);
+}
+.name{
+  margin-left: 20px;
+}
+.baristaAndCustomer{
+  text-align: center;
+}
+.drinks,.size{
+  width: 20%;
+  /* float: left; */
+  border: 2px solid rgb(228,171,34);
+  border-radius: 15px;
+  padding: 20px;
+  font-size: -2px;
+  background: rgba(255,244,238,0.50);
+  box-shadow: 5px 5px 4px black;
+  margin: 3em 1em 2em 1em;
+}
+.submitOrder{
+  color: #432818;
+  font-size: 25px;
+  border: 1px solid white;
+  background-color: white;
+  margin-left: 1%;
+  border-radius: 5px;
+  text-decoration: none;
+  text-align: center;
+  width: 35em;
+  height: 1.5em;
+}
+.submitOrderSection{
+  text-align: center;
+}
+.orderOptionsSection{
+  display: flex;
+  justify-content: center;
+}
+span .orderPlaced{
+  font-size: 35px;
+  text-align: center;
+  display: block;
+  color: rgb(228,171,34);
+}
+.typewriter h1{
+  color: #fff;
+  font-family: monospace;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid rgb(228,171,34); /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: rgb(228,171,34)}
+}

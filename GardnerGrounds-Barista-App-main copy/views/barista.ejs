@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Coffee Orders</title>
+      <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+      <link rel="stylesheet" href="barista.css"> 
+   </head>
+   <body>
+      <section >
+         <a class="logoutBtn" href="/logout"><span class="fa fa-user"></span>Logout</a>
+      </section>
+
+      <a href="/"><img src="img/barista.png"></a>
+
+ <section class="await">
+      <h3 class="">Awaiting Orders</h3>
+         <div class="new-orders">
+            <ul>
+            <% for(let i=0; i<awaiting.length; i++) {%>
+            <% console.log("awaiting",awaiting[i]) %>
+            
+                  <li id="await" class="barista2">Barista: <%= awaiting[i].barista %>
+                  <span class="customer2">Customer: <%= awaiting[i].customer %></span>
+                  <span class="beverage2">Beverages:</span>
+                  <ul>
+                     <% const beverages = awaiting[i]['beverages']%> 
+                     <% for(let i=0; i<beverages.length; i++) {%><li><span><%= beverages[i].item%></span></li><% } %> 
+                  </ul>
+                  <button id="<%= awaiting[i]._id %>" value="<%= awaiting[i].customer %>" class="complete-order">Complete Order</button>
+            </li>
+              
+            <% } %> 
+         </ul>
+      </div>
+   </section>
+   
+   <section class="complete">
+      <h3 class="">Completed Orders</h3>
+      <button class="clear-all-completed">Clear All Completed</button>
+         <div class="completedOrders">
+            <ul>
+            <% for(let i=0; i<completed.length; i++) {%>
+               <li id ="complete" class="barista2">Barista: <%= completed[i].barista %>
+               <span class="customer2">Customer: <%= completed[i].customer %></span>
+               <span class="beverage2">Beverages:</span>
+                 <ul>
+                  <% const beverages =completed[i]['beverages']%> 
+                     <% for(let j=0; j<beverages.length; j++) {%><li><span><%= beverages[j].item%></span><span></li><% } %>   
+               </ul>
+         
+               </li>
+            <% } %>
+         </ul>
+         </div>
+         </div>
+   </section>
+
+         
+      
+      <script src="barista.js"></script>
+   </body>
+</html>
+
